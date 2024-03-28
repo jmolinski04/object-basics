@@ -6,13 +6,19 @@ const cat = {
   name: "Bertie",
   breed: "Cymric",
   color: "white",
-  greeting: function () {
-    console.log("Meow!");
+  greeting() {
+    console.log(`Hello, said ${this.name} the ${this.breed}.`);
   },
 };
 
-const catName = cat["name"];
-console.log(catName);
+const cat2 = {
+  name: "Bob",
+  breed: "Abyssinian",
+  color: "white",
+  greeting() {
+    console.log(`Hello, said ${this.name} the ${this.breed}.`);
+  },
+};
+
 cat.greeting();
-cat.color = "black";
-console.log(cat.color);
+cat2.greeting();
